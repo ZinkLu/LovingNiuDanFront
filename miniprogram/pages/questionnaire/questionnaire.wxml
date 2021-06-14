@@ -1,0 +1,90 @@
+<!-- logs.wxml -->
+<view>
+  <block wx:if="{{ !submitted }}">
+    <text hidden="true">{{ userInfo.openID }}</text>
+    <view class="container">
+      <view>
+        编号
+        <text>{{ code }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        姓名
+        <text>{{ userInfo.userName }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        出生年月
+        <picker mode="date" value="1992-10-31" start="1900-01-01" end="{{ today }}" bindchange="bindDateChange">
+          <view>当前选择: {{ userInfo.birthDay }}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        身高
+        <text>{{ userInfo.height }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        星座
+        <text>{{ userInfo.constellation }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        职业
+        <text>{{ userInfo.profession }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        学历
+        <text>{{ userInfo.education }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        出生地
+        <text>{{ userInfo.birthPlace }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        婚姻状况
+        <text>{{ userInfo.marriage }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        兴趣爱好
+        <text>{{ userInfo.hobbies }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        联系方式
+        <text>{{ userInfo.contract }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        个人情况介绍（不少于50字）
+        <text>{{ userInfo.selfIntroduction }}</text>
+      </view>
+    </view>
+    <view class="container">
+      <view>
+        对ta的要求
+        <text>{{ userInfo.requirements   }}</text>
+      </view>
+    </view>
+    <button class="submitTable" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="submitTable">
+      提交
+    </button>
+  </block>
+  <block wx:v-else></block>
+</view>
