@@ -1,4 +1,7 @@
 // index.ts
+
+import { config } from "../../configs/configs"
+
 // 获取应用实例
 const app = getApp<IAppOption>()
 
@@ -55,7 +58,20 @@ Page({
       }
     )
     // return 
-    wx.login({ success: (res) => { console.log(res) } })
+    wx.login({
+      success: (res) => {
+
+        // console.log(res)
+
+        wx.request({
+          url: config.BASE_URL + "/code",
+          data: { code: res.code },
+          method: "GET",
+          success: (result) => { console.log(result) }
+        })
+
+      }
+    })
 
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写

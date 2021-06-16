@@ -1,4 +1,5 @@
 
+import { config } from "../../configs/configs"
 import { UserInfo } from "./questionnaireModel"
 
 let _today = new Date()
@@ -52,7 +53,7 @@ Page(
       // 发送请求
       wx.request(
         {
-          url: "http://ccc.yiqipinba.xyz:5000/questionnaire",
+          url: config.BASE_URL + "questionnaire",
           data: this.data.userInfo,
           dataType: "json",
           method: "POST",
