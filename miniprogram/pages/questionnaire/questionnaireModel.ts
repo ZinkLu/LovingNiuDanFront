@@ -1,4 +1,4 @@
-import { PlaceType, userInfoType, Gender, Constellation, Education, Marriage } from "./user"
+import { PlaceType, userInfoType } from "./user"
 
 class Place implements PlaceType {
     private _province = ""
@@ -30,16 +30,15 @@ class Place implements PlaceType {
 export class UserInfo implements userInfoType {
 
     serial: string
-    openID: string
     userName: string
-    gender: Gender
+    gender: number
     birthDay: string
     height: number
-    constellation: Constellation
+    constellation: string
     profession: string
-    education: Education
-    birthPlace: Place
-    marriage: Marriage
+    education: number
+    birthPlace: string
+    marriage: number
     hobbies: string
     contract: string
     selfIntroduction: string
@@ -48,16 +47,15 @@ export class UserInfo implements userInfoType {
 
     constructor() {
         this.serial = ""
-        this.openID = ""
         this.userName = ""
-        this.gender = Gender.female
+        this.gender = 0
         this.birthDay = "1992-10-31"
         this.height = 1.00
-        this.constellation = Constellation.aquarius
+        this.constellation = ""
         this.profession = ""
-        this.education = Education.postgraduateAbove
-        this.birthPlace = new Place()
-        this.marriage = Marriage.single
+        this.education = 5
+        this.birthPlace = ""
+        this.marriage = 0
         this.hobbies = ""
         this.contract = ""
         this.selfIntroduction = ""

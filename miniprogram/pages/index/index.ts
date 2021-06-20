@@ -67,17 +67,33 @@ Page({
           url: config.BASE_URL + "/code",
           data: { code: res.code },
           method: "GET",
-          success: (result) => { console.log(result) }
+          success: (result) => {
+            console.log(result)
+            const code = res.code
+
+            wx.getUserProfile({
+              desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+              success: (res) => {
+                let payload = JSON.parse(JSON.stringify(res))
+                payload.code = code
+
+                console.info(`创建用户信息的信息为${JSON.stringify(payload)}`)
+
+                wx.request({
+                  url: config.BASE_URL + "/user",
+                  data: res,
+                  method: "POST",
+                  success: (result) => { console.log(result) }
+                })
+              }
+            })
+          }
         })
-
       }
     })
 
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-      }
-    })
+
+
+
   }
 })

@@ -2,7 +2,7 @@
 <view>
   <block wx:if="{{ !submitted }}">
     <text hidden="true">{{ userInfo.openID }}</text>
-    <view class="container">
+    <view class="container" hidden="true">
       <view>
         编号
         <text>{{ code }}</text>
@@ -10,76 +10,115 @@
     </view>
     <view class="container">
       <view>
-        姓名
-        <text>{{ userInfo.userName }}</text>
+        <label for="inputUserName">
+          <text>姓名</text>
+          <input value="{{ userInfo.userName }}" id="inputUserName" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        出生年月
-        <picker mode="date" value="1992-10-31" start="1900-01-01" end="{{ today }}" bindchange="bindDateChange">
-          <view>当前选择: {{ userInfo.birthDay }}</view>
-        </picker>
+        <label for="inputUserGender">
+          性别
+          <picker mode="selector" bindchange="bindSelectorChange" id="inputUserGender" range="{{ GenderChoice }}" value="" range-key="value">
+            <view>当前选择: {{ userInfo.gender }}</view>
+          </picker>
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        身高
-        <text>{{ userInfo.height }}</text>
+        <label for="inputUserBirth">
+          出生日期
+          <picker mode="date" value="1992-10-31" start="1900-01-01" end="{{ today }}" bindchange="bindDateChange" id="inputUserBirth">
+            <view>当前选择: {{ userInfo.birthDay }}</view>
+          </picker>
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        星座
-        <text>{{ userInfo.constellation }}</text>
+        <label for="inputUserHeight">
+          <text>身高</text>
+          <input value="{{ userInfo.height }}" id="inputUserHeight" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        职业
-        <text>{{ userInfo.profession }}</text>
+        <label for="inputUserConstellation">
+          星座
+          <picker mode="selector" bindchange="bindSelectorChange" id="inputUserConstellation" range="{{ ConstellationChoice }}" value="" range-key="value">
+            <view>当前选择: {{ userInfo.constellation }}</view>
+          </picker>
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
+        <label for="inputUserProfession">
+          <text>职业</text>
+          <input value="{{ userInfo.profession }}" id="inputUserProfession" />
+        </label>
+      </view>
+    </view>
+    <view class="container">
+      <label for="inputUserEducation">
         学历
-        <text>{{ userInfo.education }}</text>
+        <picker mode="selector" bindchange="bindSelectorChange" id="inputUserEducation" range="{{ EduChoice }}" value="{{ userInfo.education }}" range-key="value">
+          <view>当前选择: {{ userInfo.education }}</view>
+        </picker>
+      </label>
+    </view>
+    <view class="container">
+      <view>
+        <label for="inputUserBirthPlace">
+          <text>出身地</text>
+          <input value="{{ userInfo.birthPlace }}" id="inputUserBirthPlace" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        出生地
-        <text>{{ userInfo.birthPlace }}</text>
-      </view>
-    </view>
-    <view class="container">
-      <view>
-        婚姻状况
         <text>{{ userInfo.marriage }}</text>
+        <label for="inputUserMarriage">
+          婚姻状况
+          <picker mode="selector" bindchange="bindSelectorChange" id="inputUserMarriage" range="{{ MarriageChoice }}" value="{{ userInfo.marriage }}" range-key="value">
+            <view>当前选择: {{ userInfo.marriage }}</view>
+          </picker>
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        兴趣爱好
-        <text>{{ userInfo.hobbies }}</text>
+        <label for="inputUserHobbies">
+          <text>兴趣爱好</text>
+          <input value="{{ userInfo.hobbies }}" id="inputUserHobbies" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        联系方式
-        <text>{{ userInfo.contract }}</text>
+        <label for="inputUserContract">
+          <text>联系方式</text>
+          <input value="{{ userInfo.contract }}" id="inputUserContract" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        个人情况介绍（不少于50字）
-        <text>{{ userInfo.selfIntroduction }}</text>
+        <label for="inputUserSelfIntroduction">
+          <text>个人介绍(不少于40字)</text>
+          <input value="{{ userInfo.selfIntroduction }}" id="inputUserSelfIntroduction" />
+        </label>
       </view>
     </view>
     <view class="container">
       <view>
-        对ta的要求
-        <text>{{ userInfo.requirements   }}</text>
+        <label for="inputUserRequirements">
+          <text>对ta的要求</text>
+          <input value="{{ userInfo.requirements }}" id="inputUserRequirements" />
+        </label>
       </view>
     </view>
     <button class="submitTable" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="submitTable">
