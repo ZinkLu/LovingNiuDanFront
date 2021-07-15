@@ -80,7 +80,10 @@ Page(
                   data: payload,
                   dataType: "json",
                   method: "POST",
-                  success: (req) => { console.log(req.data) },
+                  success: (req) => {
+                    // console.log(req)
+                    this.makeOrder(res.code, req.data.data.id)
+                  },
                   fail: (req) => { console.log(req.errMsg) }
                 }
               )
@@ -93,8 +96,33 @@ Page(
       })
     },
 
+    makeOrder(code: string, questionnaire_id: number) {
 
+      // console.log(code, questionnaire_id)
 
+      wx.request(
+        {
+          url: config.BASE_URL + "/order",
+          data: { code: code, questionnaire_id: questionnaire_id },
+          method: "POST",
+          success: (res) => {
+            console.log("making order now")
+            console.log(res)
+          }
+          // Pay()
+        }
+      )
+    },
+
+    // Pay() {
+
+    //   wx.requestPayment(
+    //     {
+
+    //     }
+    //   )
+
+    // }
   }
 )
 
