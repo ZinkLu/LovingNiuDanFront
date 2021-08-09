@@ -108,21 +108,44 @@ Page(
           success: (res) => {
             console.log("making order now")
             console.log(res)
+            let orderId = res.data.data
+            this.Pay(orderId, code)
           }
           // Pay()
         }
       )
     },
 
-    // Pay() {
+    Pay(order_id: number, code: string) {
+      console.log(`订单号 ${order_id}`)
+      wx.request(
+        {
+          url: config.BASE_URL + "/payment",
+          data: { code: code, order_id: order_id },
+          method: "POST",
+          success: (res) => {
+            console.log("get payment sign now")
+            console.log(res)
+            let payLoad = res.data.data;
+            let params = {
+              ...payLoad,
+              sussces: function(res) {
+                console.log("支付成功")
+                console.log(res.data)
+            },
+              fail: function(res) {
+                console.log("支付失败")
+                console.log(res.errMsg)
+            },
+            }
+             wx.requestPayment(params)
+          }
+        }
+      )
 
-    //   wx.requestPayment(
-    //     {
+     
 
-    //     }
-    //   )
-
-    // }
+    }
   }
 )
 
