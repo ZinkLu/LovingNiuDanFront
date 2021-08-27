@@ -1,0 +1,40 @@
+<view class="img-box">
+  <image src="./../../asset/images/7.png" style="height: {{sysHeight}}px;" class="bg-image"></image>
+</view>
+
+<view class="succes-title">
+  支付成功
+</view>
+
+<view class="success-check">
+  <view style="margin-bottom: 100rpx" class="check-item">
+    <text>合计</text>
+    <text>{{orderPrice}}</text>
+  </view>
+  <!-- <view class="check-item">
+    <text>编号</text>
+    <text>196</text>
+  </view> -->
+  <view class="check-item">
+    <text>日期</text>
+    <text>{{today}}</text>
+  </view>
+  <view class="check-item">
+    <text>支付方式</text>
+    <text>微信支付</text>
+  </view>
+  <view style="width: 100%; border: 1rpx solid lightgray;margin: 50rpx auto">
+  </view>
+  <view style="margin-top: 70%; position: relative; height: 100rpx">
+    <slider class="slider-rel" block-size="12" block-color="transparent" activeColor="transparent" backgroundColor="transparent" bindchanging="sliderChange" />
+    <image src="./../../asset/images/slider.png" class="slider-dash"></image>
+    <image style = "left :{{blockLeft}}%" src="./../../asset/images/block.png" class="slider-block"></image>
+  </view>
+  <view class="bottom-note">
+    滑动进入爱情博物馆
+  </view>
+    
+    
+</view>
+  
+  

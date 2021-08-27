@@ -1,0 +1,25 @@
+<view class="common-box">
+  <!-- 背景图片 -->
+  <image src="./../../asset/images/13.png" style="transition: all 1s;" class="bg-image {{page3 ? 'blurOff' : 'blurOn' }}"></image>
+  <!-- 滑块 -->
+  <view wx:if="{{page1}}" class="title {{ showPanel ? 'panelShow' : 'panelHide' }}">
+    打印成功
+  </view>
+  <view wx:if="{{page1}}" class="panel {{ showPanel ? 'panelShow' : 'panelHide' }}">
+    <view class="row1">
+      <image bindtap="bindViewTap" id="egg8" src="./../../asset/images/8.png"></image>
+      <image bindtap="bindViewTap" id="egg9" src="./../../asset/images/9.png"></image>
+      <image bindtap="bindViewTap" id="egg10" src="./../../asset/images/10.png"></image>
+    </view>
+    <view class="row2">
+      <image bindtap="bindViewTap" id="egg11" src="./../../asset/images/11.png"></image>
+      <image bindtap="bindViewTap" id="egg12" src="./../../asset/images/12.png"></image>
+    </view>
+    <view class="btn">选择你的扭蛋吧</view>
+  </view>
+  <view style="transition: all 1s;" wx:if="{{page2}}" class="{{ showOpenEgg ? 'panelHide' : 'panelShow' }}">
+    <image class="open-egg" src="./../../asset/images/open-egg.png"></image>
+  </view>
+    
+    
+</view>

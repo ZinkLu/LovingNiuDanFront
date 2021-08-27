@@ -1,0 +1,11 @@
+/* miniprogram/pages/person-info/person-info.wxss */
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+}

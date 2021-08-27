@@ -1,0 +1,15 @@
+/**index.wxss**/
+.invisibleBtn {
+  width: 80%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 10%;
+  background-color: rgb(237, 189, 202);
+  z-index: 3;
+  border-radius: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: rgb(147, 147, 194);
+  font-size: 46rpx;
+  letter-spacing: 10rpx;
+}

@@ -1,0 +1,70 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.img-box {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99999;
+}
+.bg-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(251, 240, 232);
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-55 {
+  margin-top: 55px;
+}
+.lable-set-width4 {
+  width: 90px !important;
+}
+.lable-set-width3 {
+  width: 74px !important;
+}
+.content {
+  padding-top: 120px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.text-default-color{
+  font-family: FZYaSong-DB-GBK;
+  font-weight: 400;
+  color: #9A97DE;
+}
+.input-group {
+  background-color: #ffffff;
+  border-radius: 26px;
+  font-size: 12px;
+  align-items: center;
+  height: 26px;
+  display: flex;
+  margin-bottom: 15px;
+
+}
+.label {
+  display: block;
+  padding-left: 14px;
+  width: 45px;
+}

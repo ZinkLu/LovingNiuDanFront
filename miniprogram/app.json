@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/choose/choose",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person-info/person-info",
+    "pages/home/home",
+    "pages/payment/payment",
+    "pages/paySuccess/paysuccess",
+    "pages/form/form",
+    "pages/print/print",
+    "pages/outcome/outcome"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

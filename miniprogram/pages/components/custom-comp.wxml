@@ -1,0 +1,8 @@
+<view>
+  <text>姓名: </text>
+  <input name="name" />
+</view>
+<view>
+  <text>学生:</text>
+  <switch name="student" />
+</view>

@@ -1,0 +1,116 @@
+<!--miniprogram/pages/person-info/person-info.wxml-->
+<view>
+  <swiper bindchange="changeSwiper" style="height: {{sysHeight}}px;">
+    <swiper-item>
+      <view>
+      <view class="img-box">
+        <image src="./../../asset/images/02_02.png" style="height: {{sysHeight}}px;" class="bg-image"></image>
+      </view>
+      <view class="content">
+        <view class="upload">
+          <image src="./../../asset/images/upload.svg"></image>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">编号:</text>
+          <input type="text" name="" placeholder="请输入编号" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">姓名:</text>
+          <input type="text" name="" placeholder="请输入姓名" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">年龄:</text>
+          <input type="number" name=""  placeholder="请输入年龄" placeholder-class="text-default-color"/>
+        </view>
+      
+        <view class="input-group text-default-color">
+          <text class="label">身高:</text>
+          <input type="text" name="" placeholder="请输入身高" placeholder-class="text-default-color"/>
+        </view>
+      </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view>
+      <view class="img-box">
+        <image src="./../../asset/images/info-2.png" style="height: {{sysHeight}}px;" class="bg-image"></image>
+      </view>
+      <view class="content">
+        <view class="input-group text-default-color mt-15">
+          <text class="label">星座:</text>
+          <input type="text" name="" placeholder="请输入星座" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">职业:</text>
+          <input type="text" name="" placeholder="请输入职业" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">学历:</text>
+          <input type="number" name=""  placeholder="请输入学历" placeholder-class="text-default-color"/>
+        </view>
+      
+        <view class="input-group text-default-color">
+          <text class="label lable-set-width3">出生地:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+
+
+        <view class="input-group text-default-color">
+          <text class="label lable-set-width3">工作地:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label lable-set-width4">婚姻状况:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label lable-set-width4">兴趣爱好:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label lable-set-width4">联系电话:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+
+        <view class="input-group text-default-color">
+          <text class="label">微信:</text>
+          <input type="text" name="" placeholder="请输入出生地" placeholder-class="text-default-color"/>
+        </view>
+      </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="img-box">
+        <image src="./../../asset/images/info-3.png" style="height: {{sysHeight}}px;" class="bg-image"></image>
+      </view>
+      <view class="content">
+        <view class="section mt-55">
+          <textarea placeholder="请输入个人简介" placeholder-class="text-default-color" class="text-default-color" maxlength="-1" style="height: {{textAreaHeight}}px; width: {{textAreaWidth}}px"/>
+        </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="img-box">
+        <image src="./../../asset/images/info-3.png" style="height: {{sysHeight}}px;" class="bg-image"></image>
+      </view>
+      <view class="content">
+        <view class="section mt-55">
+          <textarea placeholder="请输入对ta的要求" class="text-default-color" placeholder-class="text-default-color" maxlength="-1" style="height: {{textAreaHeight}}px; width: {{textAreaWidth}}px"/>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+

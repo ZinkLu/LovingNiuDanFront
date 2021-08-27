@@ -1,0 +1,50 @@
+<view class="common-box">
+  <!-- 背景图片 -->
+  <image src="./../../asset/images/13.png" style="filter: blur(6px);" class="bg-image"></image>
+  <!-- 滑块 -->
+  <swiper class="swiper-box">
+    <!-- 第二页 -->
+    <swiper-item class="panel-box">
+      <view class="form-panel">
+        <scroll-view scroll-y="true" class="panel-content">
+          <text class="name" selectable="false" space="false" decode="false">
+            姓名: {{formInfo.name}}
+          </text>
+          <view class="split-dash"></view>
+            <view class="info">生日: {{formInfo.birthDay}}</view>
+            <view class="info">身高: {{formInfo.height}}</view>
+            <view class="info">星座: {{constellation}}</view>
+            <view class="info">职业: {{formInfo.profession}}</view>
+            <view class="info">学历: {{educationList[formInfo.education]}}</view>
+            <view class="info">出生地: {{formInfo.birth_place}}</view>
+            <view class="info">婚姻: {{marriageList[formInfo.marriage]}}</view>
+            <view class="info">电话: {{formInfo.contract}}</view>
+          <view class="info">
+            兴趣爱好: {{formInfo.hobbies}}
+          </view>
+          <view class="split-dash"></view>
+          <text class="info" selectable="false" space="false" decode="false">
+            个人简介: {{formInfo.self_introduction}}
+          </text>
+          <view class="split-dash"></view>
+          <text class="info">
+            对ta的要求: {{formInfo.requirements}}
+          </text>
+        </scroll-view>
+      </view>
+      <view class="rule">
+        <view class="outer">
+          <view class="inner"></view>
+        </view>
+        我已认证确认上述信息
+      </view>
+      <view class="rule">
+        <view class="outer">
+          <view class="inner"></view>
+        </view>
+        打印信息
+      </view>
+      <view class="btn" bindtap="bindViewTap">生成扭蛋</view>
+    </swiper-item>
+  </swiper>
+</view>

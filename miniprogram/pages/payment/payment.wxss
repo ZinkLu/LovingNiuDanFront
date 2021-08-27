@@ -1,0 +1,92 @@
+/* miniprogram/pages/payment/payment.wxss */
+.payment-method {
+  background-color: #ffffff;
+  padding: 15px 30px 30px 30px;
+  border-radius: 4px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #F44997;
+}
+.checkbox image{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.payment-method-title {
+  display: block;
+  text-align: center;
+  padding-bottom: 8px;
+  font-size: 29px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #F44997;
+  border-bottom: 2px solid #eeeeee;
+}
+.block-box {
+  border-top: 1px solid #eeeeee;
+  padding-right: 15px;
+  padding-top: 25px;
+  width: 178px;
+  font-size: 13px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #F44997;
+  line-height: 23px;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+}
+.saveBtn {
+  margin-top: 15px;
+  background-color: #FFD0DE;
+  width: 90%;
+  display: flex;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  height: 43px;
+  font-size: 40rpx;
+  letter-spacing: 10rpx;
+}
+.payment-box {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-top: 40px;
+}
+.payment-header {
+  padding: 30px 30px 30px 30px;
+  border-radius: 4px;
+  display: block;
+  background-color: #FECBDA;
+  margin-bottom: 10px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #F44997;
+}
+.payment-header-title {
+  display: block;
+  text-align: center;
+  font-size: 45px;
+  font-family: BDZongYi-A001;
+  font-weight: normal;
+  color: #F44997;
+}
+
+.payment-header-sub-title {
+  font-size: 12px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #F873B6;
+  text-decoration:line-through;
+  display: block;
+  text-align: center;
+}
+
+.payment-discount {
+  border-top: 2px solid #ffffff;
+  margin-top: 8px;
+  padding-top: 8px;
+}

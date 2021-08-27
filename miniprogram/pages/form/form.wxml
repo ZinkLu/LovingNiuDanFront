@@ -1,0 +1,227 @@
+<view class="common-box">
+  <!-- 背景图片 -->
+  <image src="./../../asset/images/13.png" style="filter: blur(6px);" class="bg-image"></image>
+  <!-- 滑块 -->
+  <swiper class="swiper-box">
+    <!-- 第一页 -->
+    <swiper-item class="panel-box">
+      <view class="form-panel">
+        <!-- 标题 -->
+        <view class="form-panel-title">
+          <image style="height: 70rpx; width: 360rpx;" src="./../../asset/images/5.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+            
+          <!-- 装饰物 -->
+          <view class="title-dots">
+            <view wx:for="{{9}}" wx:key="*this" class="title-dot"></view>
+          </view>
+          <view class="title-bar"></view>
+        </view>
+        <!-- 左边虚线 -->
+        <view class="left-dash">
+          <view wx:for="{{15}}" wx:key="*this" class="left-dash-dot"></view>
+        </view>
+        <!-- 右边虚线 -->
+        <view class="right-dash">
+          <view wx:for="{{9}}" wx:key="*this" class="right-dash-dash"></view>
+        </view>
+        <!-- 页码 -->
+        <view class="page-bar">
+          <view class="page-dot current-page"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+        </view>
+        <!-- 内容 -->
+        <view class="panel-content">
+          <!-- 姓名 -->
+          <view class="content-item">
+            <text class="content-item-label">姓名</text>
+            <input bindinput="inputedit" id="name" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入姓名"/>
+          </view>
+          <!-- 生日 -->
+          <view class="content-item">
+            <text class="content-item-label">生日</text>
+            <picker bindchange="pcikerChange" id="birthDay" value="{{birthDay}}" mode="date" class="content-item-picker">
+              <view class="content-item-val">
+                {{birthDay || '请选择生日'}}
+              </view>
+            </picker>
+          </view>
+          <!-- 身高 -->
+          <view class="content-item">
+            <text class="content-item-label">身高</text>
+            <input bindinput="inputedit" id="height" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入身高"/>
+          </view>
+          <!-- 性别 -->
+          <view class="content-item">
+            <text class="content-item-label">性别</text>
+            <picker bindchange="pcikerChange" id="gender" value="{{gender}}" range="{{genderList}}" class="content-item-picker">
+              <view class="content-item-val">
+                {{gender > -1 ? genderList[gender] : '请选择性别'}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+        <image src="./../../asset/images/open-egg.png" class="open-egg"></image>
+      </view>
+    </swiper-item>
+    <!-- 第二页 -->
+    <swiper-item class="panel-box">
+      <view class="form-panel form-panel-big">
+        <!-- 标题 -->
+        <view class="form-panel-title">
+          
+          <image style="height: 70rpx; width: 360rpx;" src="./../../asset/images/5.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+          <!-- 装饰物 -->
+          <view class="title-dots">
+            <view wx:for="{{9}}" wx:key="*this" class="title-dot"></view>
+          </view>
+          <view class="title-bar"></view>
+        </view>
+        <!-- 左边虚线 -->
+        <view class="left-dash">
+          <view wx:for="{{15}}" wx:key="*this" class="left-dash-dot"></view>
+        </view>
+        <!-- 右边虚线 -->
+        <view class="right-dash">
+          <view wx:for="{{9}}" wx:key="*this" class="right-dash-dash"></view>
+        </view>
+        <!-- 页码 -->
+        <view class="page-bar">
+          <view class="page-dot"></view>
+          <view class="page-dot current-page"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+        </view>
+        <!-- <view class="panel-content"> -->
+        <scroll-view scroll-y="true" class="panel-content panel-content-big">
+          <!-- 星座 -->
+          <view class="content-item">
+            <text class="content-item-label">星座</text>
+            <picker class="content-item-picker" bindchange="constellationChange" value="{{constellationIndex}}" range="{{constellationList}}">
+              <view class="content-item-val">
+                {{constellationIndex > -1 ? constellationList[constellationIndex] : '请选择'}}
+              </view>
+            </picker>
+          </view>
+          <!-- 职业 -->
+          <view class="content-item">
+            <text class="content-item-label">职业</text>
+            <input bindinput="inputedit" id="profession" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入职业"/>
+          </view>
+          <!-- 学历 -->
+          <view class="content-item">
+            <text class="content-item-label">学历</text>
+            <picker class="content-item-picker" bindchange="educationChange" value="{{educationIndex}}" range="{{educationList}}">
+              <view class="content-item-val">
+                {{educationIndex > -1 ? educationList[educationIndex] : '请选择'}}
+              </view>
+            </picker>
+          </view>
+          <!-- 出生地 -->
+          <view class="content-item">
+            <text class="content-item-label">出生地</text>
+            <input bindinput="inputedit" id="birth_place" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入出生地"/>
+          </view>
+          <!-- 工作地 -->
+          <view class="content-item">
+            <text class="content-item-label">联系电话</text>
+            <input bindinput="inputedit" id="contract" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入联系电话"/>
+          </view>
+          <!-- 婚姻状况 -->
+          <view class="content-item">
+            <text class="content-item-label">婚姻状况</text>
+            <picker class="content-item-picker" bindchange="marriageChange" value="{{marriageIndex}}" range="{{marriageList}}">
+              <view class="content-item-val">
+                {{marriageIndex > -1 ? marriageList[marriageIndex] : '请选择'}}
+              </view>
+            </picker>
+          </view>
+          <!-- 兴趣爱好 -->
+          <view class="content-item">
+            <text class="content-item-label">兴趣爱好</text>
+            <input bindinput="inputedit" id="hobbies" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入兴趣爱好"/>
+          </view>
+        </scroll-view>
+        <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+        <!-- </view> -->
+      </view>
+    </swiper-item>
+    <!-- 第三页 -->
+    <swiper-item class="panel-box">
+      <view class="form-panel form-panel-big">
+        <!-- 标题 -->
+        <view class="form-panel-title">
+          
+          <image style="height: 70rpx; width: 360rpx;" src="./../../asset/images/5.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+          <!-- 装饰物 -->
+          <view class="title-dots">
+            <view wx:for="{{9}}" wx:key="*this" class="title-dot"></view>
+          </view>
+          <view class="title-bar"></view>
+        </view>
+        <!-- 左边虚线 -->
+        <view class="left-dash">
+          <view wx:for="{{15}}" wx:key="*this" class="left-dash-dot"></view>
+        </view>
+        <!-- 右边虚线 -->
+        <view class="right-dash">
+          <view wx:for="{{9}}" wx:key="*this" class="right-dash-dash"></view>
+        </view>
+        <!-- 页码 -->
+        <view class="page-bar">
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot current-page"></view>
+          <view class="page-dot"></view>
+        </view>
+        <view class="panel-content panel-content-big">
+          <textarea class="panel-textarea" value="{{personalInfo}}" bindinput="personInfoChange" maxlength="1000" placeholder-class="content-item-placeholder" auto-focus placeholder="请输入个人简介" />
+          <text class="textarea-count">
+            {{personalInfo.length}} / 40
+          </text>
+        </view>
+        <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+      </view>
+    </swiper-item>
+    <!-- 第四页 -->
+    <swiper-item class="panel-box">
+      <view class="form-panel form-panel-big">
+        <!-- 标题 -->
+        <view class="form-panel-title">
+          
+          <image style="height: 70rpx; width: 360rpx;" src="./../../asset/images/5.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+          <!-- 装饰物 -->
+          <view class="title-dots">
+            <view wx:for="{{9}}" class="title-dot"></view>
+          </view>
+          <view class="title-bar"></view>
+        </view>
+        <!-- 左边虚线 -->
+        <view class="left-dash">
+          <view wx:for="{{15}}" class="left-dash-dot"></view>
+        </view>
+        <!-- 右边虚线 -->
+        <view class="right-dash">
+          <view wx:for="{{9}}" class="right-dash-dash"></view>
+        </view>
+        <!-- 页码 -->
+        <!-- <view class="page-bar" bindtap="goPay">
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot"></view>
+          <view class="page-dot current-page"></view>
+        </view> -->
+        <view class="panel-content panel-content-big">
+          <textarea class="panel-textarea" value="{{requireInfo}}" bindinput="requireInfoChange" maxlength="1000" placeholder-class="content-item-placeholder" auto-focus placeholder="请输入对ta的要求" />
+          <text class="textarea-count">
+            {{requireInfo.length}} / 40
+          </text>
+        </view>
+        <!-- <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" /> -->
+        <view bindtap="goPay" class="btn">提交</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

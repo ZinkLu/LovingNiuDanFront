@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "FW 16099",
+    "navigationBarTextStyle": "black"
+  },
+  "navigationBarTitleText": "扭蛋"
+}

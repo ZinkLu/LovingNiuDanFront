@@ -1,0 +1,58 @@
+/* miniprogram/pages/paySuccess/paysuccess.wxss */
+.succes-title {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 68rpx;
+  letter-spacing: 12rpx;
+  margin-top: 60rpx;
+}
+
+.success-check {
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  margin-top: 50rpx;
+  padding: 5%;
+}
+
+.check-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F44997;
+  margin-top: 20rpx;
+}
+
+.slider-dash {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 4rpx;
+  top: 16rpx;
+}
+
+.slider-block {
+  position: absolute;
+  left: 0;
+  top: -18rpx;
+  width: 96rpx;
+  height: 72rpx;
+}
+
+.slider-rel {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  top: -16rpx;
+}
+
+.bottom-note {
+  color: #F44997;
+  font-size: 38rpx;
+  letter-spacing: 12rpx;
+  width: 100%;
+  text-align: center;
+}
