@@ -35,7 +35,7 @@ Page({
         const price = result.data.data.ORDER_PRICE || 0
         app.globalData.orderPrice = price
         this.setData({
-          orderPrice: price
+          orderPrice: price / 100
         });
       },
       fail: () => {

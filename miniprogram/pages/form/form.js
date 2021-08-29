@@ -14,7 +14,7 @@ Page({
         requireInfo: '',
         formData: {
             name: '', // 名字
-            gender: 0, // 性别
+            gender: -1, // 性别
             birthDay: '', // 生日
             height: 0, // 身高
             constellation: '', // 星座

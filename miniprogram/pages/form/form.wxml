@@ -36,7 +36,9 @@
           <!-- 姓名 -->
           <view class="content-item">
             <text class="content-item-label">姓名</text>
-            <input bindinput="inputedit" id="name" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入姓名"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="name" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入姓名" adjust-position="{{true}}"/>
+            </view>
           </view>
           <!-- 生日 -->
           <view class="content-item">
@@ -50,7 +52,9 @@
           <!-- 身高 -->
           <view class="content-item">
             <text class="content-item-label">身高</text>
-            <input bindinput="inputedit" id="height" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入身高"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="height" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入身高"/>
+            </view>
           </view>
           <!-- 性别 -->
           <view class="content-item">
@@ -108,7 +112,9 @@
           <!-- 职业 -->
           <view class="content-item">
             <text class="content-item-label">职业</text>
-            <input bindinput="inputedit" id="profession" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入职业"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="profession" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入职业"/>
+            </view>
           </view>
           <!-- 学历 -->
           <view class="content-item">
@@ -122,12 +128,16 @@
           <!-- 出生地 -->
           <view class="content-item">
             <text class="content-item-label">出生地</text>
-            <input bindinput="inputedit" id="birth_place" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入出生地"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="birth_place" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入出生地"/>
+            </view>
           </view>
           <!-- 工作地 -->
           <view class="content-item">
             <text class="content-item-label">联系电话</text>
-            <input bindinput="inputedit" id="contract" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入联系电话"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="contract" type="number" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入联系电话"/>
+            </view>
           </view>
           <!-- 婚姻状况 -->
           <view class="content-item">
@@ -141,7 +151,9 @@
           <!-- 兴趣爱好 -->
           <view class="content-item">
             <text class="content-item-label">兴趣爱好</text>
-            <input bindinput="inputedit" id="hobbies" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入兴趣爱好"/>
+            <view class="inner-content-item-val">
+                <input bindinput="inputedit" id="hobbies" class="content-item-val" placeholder-class="content-item-placeholder" class="weui-input" placeholder="请输入兴趣爱好"/>
+            </view>
           </view>
         </scroll-view>
         <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />

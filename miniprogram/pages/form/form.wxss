@@ -155,6 +155,11 @@
   line-height: 88rpx;
 }
 
+.inner-content-item-val {
+    font-size: 28rpx;
+    color: #DDD2FF;
+}
+
 .content-item-picker {
   width: 60%;
   height: 88rpx;

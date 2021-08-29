@@ -17,7 +17,7 @@
     </view>
     <view class="btn">选择你的扭蛋吧</view>
   </view>
-  <view style="transition: all 1s;" wx:if="{{page2}}" class="{{ showOpenEgg ? 'panelHide' : 'panelShow' }}">
+  <view style="transition: all 1s;" wx:if="{{page2}}" class="{{ showOpenEgg ? 'panelHide  container' : 'panelShow  container' }}">
     <image class="open-egg" src="./../../asset/images/open-egg.png"></image>
   </view>
     
