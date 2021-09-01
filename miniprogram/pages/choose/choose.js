@@ -7,13 +7,15 @@ Page({
         page1: true,
         page2: false,
         page3: false,
+        whichEgg: ''
     },
     onLoad: function () {
     },
     bindViewTap (val) {
         console.log('log: 123', val.currentTarget.id)
         this.setData({
-            showPanel: false
+            showPanel: false,
+            whichEgg: val.currentTarget.id
         });
         setTimeout(() => {
             this.setData({

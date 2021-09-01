@@ -10,22 +10,22 @@ Page({
     },
     onLoad: function () {
         
-        const payload = {
-            name: 'name',
-            gender: 0,
-            birthDay: '1992-10-31',
-            height: 180,
-            constellation: 'leo',
-            profession: 'profession',
-            education: 1,
-            birth_place: 'birth_place',
-            marriage: 1,
-            hobbies: 'hobbies',
-            contract: 'contract',
-            self_introduction: 'self_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introduction',
-            requirements: 'requirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirements'
-        }
-        app.globalData.formInfo = payload
+        // const payload = {
+        //     name: 'name',
+        //     gender: 0,
+        //     birthDay: '1992-10-31',
+        //     height: 180,
+        //     constellation: 'leo',
+        //     profession: 'profession',
+        //     education: 1,
+        //     birth_place: 'birth_place',
+        //     marriage: 1,
+        //     hobbies: 'hobbies',
+        //     contract: 'contract',
+        //     self_introduction: 'self_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introductionself_introduction',
+        //     requirements: 'requirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirementsrequirements'
+        // }
+        // app.globalData.formInfo = payload
         
         let constellation = ''
         switch (app.globalData.formInfo.constellation) {
