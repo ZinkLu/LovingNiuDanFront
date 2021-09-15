@@ -43,9 +43,9 @@
           <!-- 生日 -->
           <view class="content-item">
             <text class="content-item-label">生日</text>
-            <picker bindchange="pcikerChange" id="birthDay" value="{{birthDay}}" mode="date" class="content-item-picker">
+            <picker bindchange="pcikerChange" id="birth_day" value="{{birth_day}}" mode="date" class="content-item-picker">
               <view class="content-item-val">
-                {{birthDay || '请选择生日'}}
+                {{birth_day || '请选择生日'}}
               </view>
             </picker>
           </view>

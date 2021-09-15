@@ -15,7 +15,7 @@ Page({
         formData: {
             name: '', // 名字
             gender: -1, // 性别
-            birthDay: '', // 生日
+            birth_day: '', // 生日
             height: 0, // 身高
             constellation: '', // 星座
             profession: '', // 职业
@@ -27,7 +27,7 @@ Page({
             self_introduction: '', // 自我介绍
             requirements: '' // 要求
         },
-        birthDay: '',
+        birth_day: '',
         gender: -1
     },
     onLoad: function () {
@@ -162,7 +162,7 @@ Page({
         // const payload = {
         //     name: 'name',
         //     gender: 0,
-        //     birthDay: '1992-10-31',
+        //     birth_day: '1992-10-31',
         //     height: 180,
         //     constellation: 'leo',
         //     profession: 'profession',
@@ -183,7 +183,7 @@ Page({
 
         if (!payload.name) {
             tips = '姓名一定要填噢'
-        } else if (!payload.birthDay) {
+        } else if (!payload.birth_day) {
             tips = '生日一定要填噢'
         } else if (!payload.height) {
             tips = '身高一定要填噢'

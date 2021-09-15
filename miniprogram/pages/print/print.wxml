@@ -11,7 +11,7 @@
             姓名: {{formInfo.name}}
           </text>
           <view class="split-dash"></view>
-            <view class="info">生日: {{formInfo.birthDay}}</view>
+            <view class="info">生日: {{formInfo.birth_day}}</view>
             <view class="info">身高: {{formInfo.height}}</view>
             <view class="info">星座: {{constellation}}</view>
             <view class="info">职业: {{formInfo.profession}}</view>

@@ -13,7 +13,7 @@ Page({
         // const payload = {
         //     name: 'name',
         //     gender: 0,
-        //     birthDay: '1992-10-31',
+        //     birth_day: '1992-10-31',
         //     height: 180,
         //     constellation: 'leo',
         //     profession: 'profession',
