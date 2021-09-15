@@ -1,6 +1,6 @@
 <view class="common-box">
   <!-- 背景图片 -->
-  <image src="./../../asset/images/13.png" style="transition: all 2s;" class="bg-image {{page3 ? 'blurOff' : 'blurOn' }}"></image>
+  <image src="./../../asset/images/13.png" style="transition: all 1s;" class="bg-image {{page3 ? 'blurOff' : 'blurOn' }}"></image>
   <!-- 滑块 -->
   <view wx:if="{{page1}}" class="title {{ showPanel ? 'panelShow' : 'panelHide' }}">
     打印成功
@@ -17,7 +17,7 @@
     </view>
     <view class="btn">选择你的扭蛋吧</view>
   </view>
-  <view style="transition: all 2s;" wx:if="{{page2}}" class="{{ showOpenEgg ? 'panelHide container open-egg' : 'panelShow container open-egg' }}">
+  <view style="transition: all 1s;" wx:if="{{page2}}" class="{{ showOpenEgg ? 'panelHide container open-egg' : 'panelShow container open-egg' }}">
     <image mode='widthFix' wx:if="{{whichEgg === 'egg8'}}" src="./../../asset/images/open-egg8.png"></image>
     <image mode='widthFix' wx:if="{{whichEgg === 'egg9'}}" src="./../../asset/images/open-egg9.png"></image>
     <image mode='widthFix' wx:if="{{whichEgg === 'egg10'}}" src="./../../asset/images/open-egg10.png"></image>
