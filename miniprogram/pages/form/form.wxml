@@ -32,7 +32,13 @@
           <view class="page-dot"></view>
         </view>
         <!-- 内容 -->
-        <view class="panel-content">
+        <scroll-view scroll-y="true" class="panel-content">
+          <!-- 头像上传 -->
+          <view class="header" bind:tap="chooseHeader">
+            <view wx:if="{{!headerUrl}}" style="margin: 20rpx auto;padding-top: 20rpx">+</view>
+            <view wx:if="{{!headerUrl}}">添加头像</view>
+            <image wx:if="{{headerUrl}}" src="{{headerUrl}}"/>
+          </view>
           <!-- 姓名 -->
           <view class="content-item">
             <text class="content-item-label">姓名</text>
@@ -65,7 +71,8 @@
               </view>
             </picker>
           </view>
-        </view>
+        </scroll-view>
+        <!-- </view> -->
         <image style="height: 70rpx; width: 360rpx;position: absolute;left: 20%;" src="./../../asset/images/4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
         <image src="./../../asset/images/open-egg.png" class="open-egg"></image>
       </view>

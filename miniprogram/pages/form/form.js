@@ -1,5 +1,6 @@
 "use strict";
 var app = getApp();
+
 Page({
     data: {
         // background: ['demo-text-1', 'demo-text-2', 'demo-text-3']
@@ -25,12 +26,60 @@ Page({
             hobbies: '', // 爱好
             contract: '', // 联系电话
             self_introduction: '', // 自我介绍
-            requirements: '' // 要求
+            requirements: '', // 要求
+            picture_url: ''
         },
         birth_day: '',
-        gender: -1
+        gender: -1,
+        headerUrl: ''
     },
     onLoad: function () {
+    },
+    chooseHeader() {
+        const that = this
+        wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
+            success(res) {
+                // tempFilePath可以作为img标签的src属性显示图片
+                const tempFilePaths = res.tempFilePaths
+                console.log('log: tempFilePaths', tempFilePaths)
+                that.setData({
+                    headerUrl: tempFilePaths
+                })
+                app.globalData.headerUrl = tempFilePaths
+
+                let base64 = wx.getFileSystemManager().readFileSync(res.tempFilePaths[0], 'base64')
+                // console.log('data:image/png;base64,' + base64)
+
+                wx.request({
+                    url: app.globalData.baseUrl + "/upload",
+                    data: {
+                        data: base64,
+                        file_name: tempFilePaths[0]
+                    },
+                    method: "POST",
+                    success: (result) => {
+                        const response = result.data
+                        console.log('response', response)
+                        if (response.status === 0) {
+                            const headurl = response.data
+                            const obj = that.data.formData
+                            obj.picture_url = headurl
+                            that.setData(obj);
+                            console.log('log: after', that.data.formData)
+                        } else {
+                            // 上传图片失败
+                        }
+                    },
+                    fail: () => {
+                        return
+                    }
+                })
+
+            }
+        })
     },
     // 输入框变化
     inputedit(val) {
@@ -201,6 +250,8 @@ Page({
             tips = '自我介绍至少40字噢'
         } else if (payload.requirements.length < 40) {
             tips = '对ta的要求至少40字噢'
+        } else if (!payload.picture_url) {
+            tips = '头像一定要上传噢'
         }
         if (tips) {
             wx.showToast({

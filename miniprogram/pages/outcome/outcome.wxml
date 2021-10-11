@@ -7,9 +7,12 @@
     <swiper-item class="panel-box">
       <view class="form-panel">
         <scroll-view scroll-y="true" class="panel-content">
-          <text class="name" selectable="false" space="false" decode="false">
-            姓名: {{formInfo.name}}
-          </text>
+          <view style="margin-top: 10%">
+            <view style="display: inline;margin-right: 50%;" class="name">
+              姓名: {{formInfo.name}}
+            </view>
+            <image class="head" src="{{formInfo.picture_url}}"/>
+          </view>
           <view class="split-dash"></view>
             <view class="info">生日: {{formInfo.birth_day}}</view>
             <view class="info">身高: {{formInfo.height}}</view>

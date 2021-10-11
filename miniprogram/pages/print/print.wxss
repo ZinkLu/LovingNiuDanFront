@@ -117,3 +117,9 @@
   letter-spacing: 10rpx;
   margin-top: 20rpx;
 } 
+
+.head {
+  width: 100rpx;
+  height: 140rpx;
+  margin-top: 20px;
+}

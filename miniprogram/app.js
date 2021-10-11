@@ -5,7 +5,8 @@ App({
         baseUrl: 'https://zzw.xtniu.com/api',
         questionnaireId: -1,
         orderPrice: 0,
-        formInfo: {}
+        formInfo: {},
+        headerUrl: ""
     },
     onLaunch: function () {
         var logs = wx.getStorageSync('logs') || [];

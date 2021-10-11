@@ -70,7 +70,8 @@ Page({
         }
         this.setData({
             formInfo: app.globalData.formInfo,
-            constellation: constellation
+            constellation: constellation,
+            headerUrl: app.globalData.headerUrl
         });
         console.log('log: ', this.data.formInfo)
     },

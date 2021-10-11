@@ -49,6 +49,11 @@
   font-size: 36rpx;
 }
 
+.head {
+  width: 100rpx;
+  height: 140rpx;
+}
+
 .split-dash {
   border: 1rpx dashed lightgray;
   margin-top: 20rpx;
